@@ -102,7 +102,8 @@ body {
 
 .container {
   width: 100%;
-  height: 500%;
+  height: auto;
+  min-height: 100%;
   background: #123A31;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,7 +119,7 @@ body {
 
 .header {
   width: 90%;
-  height: 100px;
+  height: 70px;
   background: -webkit-gradient(linear, left top, left bottom, from(#5AE7C4), to(#D1F5EC));
   background: linear-gradient(180deg, #5AE7C4 0%, #D1F5EC 100%);
   background-color: #36b797;
@@ -162,6 +163,7 @@ body {
 
 .list__item {
   width: 100%;
+  min-width: 300px;
   height: 100px;
   margin: 10px 0;
   text-align: center;
@@ -182,4 +184,12 @@ body {
 
 a {
   color: inherit;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
