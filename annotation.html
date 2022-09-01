@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GREENMAN</h1>
+        </div>
+
+        <div class="list">
+            <input type="text" class="search" id="inputSearch" placeholder="Поиск" title="Type in a category"> 2, 3, 12, 17, 19, 21, 22,
+            <ul id="list">
+                <li><a href="assets/annotation/1.html" class="list__item">Настойка черного ореха</a></li>
+                <li><a href="assets/annotation/2.html" class="list__item">Сироп черного ореха</a></li>
+                <li><a href="assets/annotation/3.html" class="list__item">Чёрный орех на меду</a></li>
+                <li><a href="assets/annotation/4.html" class="list__item">Настойка Софоры Японской и Омелы Белой </a></li>
+                <li><a href="assets/annotation/5.html" class="list__item">Петров крест</a></li>
+                <li><a href="assets/annotation/6.html " class="list__item">Настойка Гинко Билобы</a></li>
+                <li><a href="assets/annotation/7.html " class="list__item">Витграсс</a></li>
+                <li><a href="assets/annotation/9.html" class="list__item">Лопух</a></li>
+                <li><a href="assets/annotation/11.html" class="list__item">Настойка Красной щетки</a></li>
+                <li><a href="assets/annotation/12.html" class="list__item">Пион</a></li>
+                <li><a href="assets/annotation/13.html" class="list__item">Настойка корня лопуха</a></li>
+                <li><a href="assets/annotation/14.html" class="list__item">Настойка Болиголова пятнистого</a></li>
+                <li><a href="assets/annotation/15.html" class="list__item">Настойка Софоры Японской</a></li>
+                <li><a href="assets/annotation/16.html " class="list__item">Сок крапивы на спирту</a></li>
+                <li><a href="assets/annotation/17.html " class="list__item">Сок чистотела</a></li>
+                <li><a href="assets/annotation/18.html" class="list__item">Сосновые шишки</a></li>
+                <li><a href="assets/annotation/20.html" class="list__item">Настойка зизифоры</a></li>
+                <li><a href="assets/annotation/21.html" class="list__item">Барлейграсс</a></li>
+                <li><a href="assets/annotation/23.html" class="list__item">Настойка каштана</a></li>
+
+                <li><a href="assets/annotation/24.html" class="list__item">Корень одуванчика</a></li>
+                <li><a href="assets/annotation/25.html" class="list__item">Омела</a></li>
+                <li><a href="assets/annotation/26.html" class="list__item">Подорожник</a></li>
+                <li><a href="assets/annotation/27.html" class="list__item">Родиола</a></li>
+                <li><a href="assets/annotation/28.html" class="list__item">Сок одуванчика</a></li>
+                <li><a href="assets/annotation/29.html" class="list__item">Спирулина</a></li>
+                <li><a href="assets/annotation/30.html" class="list__item">Хлорела</a></li>
+                <li><a href="assets/annotation/31.html" class="list__item">Эвкалипт</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            let input = document.getElementById("inputSearch");
+            let filter = input.value.toUpperCase();
+            let ul = document.getElementById("list");
+            let li = ul.getElementsByTagName("li");
+
+            // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+            for (let i = 0; i < li.length; i++) {
+                let a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        document.addEventListener('keyup', search);
+    </script>
+</body>
+
+</html>
