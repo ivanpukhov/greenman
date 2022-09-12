@@ -7,12 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         table {
-            width: 100%;
+            width: 100vw;
+            max-height: 65em;
+            overflow: hidden;
+            display: flex;
+            text-align: space-between;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            justify-content: space-between;
         }
         
         tr {
-            height: 114px;
+            height: 138px;
+            display: flex;
+            text-align: center;
+            align-items: top;
+            justify-content: space-around;
         }
         
         td {
@@ -24,7 +42,7 @@
 <body>
     <table>
         <tr>
-            <td><b>Петров крест</b><br><u>Не превышать дозировку</u><br>Хранить в темном прохладном месте</td>
+            <td><b>Петров крест</b><br><u>Не превышать дозировку</u><br> Хранить в темном прохладном месте</td>
             <td><b>Петров крест</b><br><u>Не превышать дозировку</u><br> Хранить в темном прохладном месте</td>
         </tr>
         <tr>
